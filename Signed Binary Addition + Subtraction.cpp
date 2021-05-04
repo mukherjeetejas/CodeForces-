@@ -56,9 +56,16 @@ void binarymedium(int choice) {
     nop1 = todecimal(op1);
     nop2 = todecimal(op2);
     if (choice == 1)
+    {
+        if (nop1+nop2>0)
+        cout<<0;
     cout<<decimal_to_binary(nop1+nop2);
-    else 
+    }
+    else {
+    if (nop1-nop2>0)
+    cout<<0;
     cout<<decimal_to_binary(nop1-nop2);
+    }
 }
 
 int main() {
