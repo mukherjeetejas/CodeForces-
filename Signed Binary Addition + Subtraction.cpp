@@ -15,24 +15,14 @@ int todecimal(string binary) {
     return unsignedpart(binary);
 }
 
-string decimal_to_binary(int n){
-   if ( n < 0 )
-   {
-      return string("1") + decimal_to_binary(-n);
-   }
-
-   if ( n == 0 )
-   {
-      return string("0");
-   }
-
-   string result = "";
-   while(n > 0){
-      result = string(1, (char) (n%2 + 48)) + result;
-      n = n/2;
-   }
-   return result;
-} 
+string toBinary(int n)
+{
+    if (n==0)
+    return "0";
+    string r;
+    while(n!=0) {r=(n%2==0 ?"0":"1")+r; n/=2;}
+    return r;
+}
 
 void decimalmedium(int choice) {
     int op1,op2;
@@ -41,9 +31,21 @@ void decimalmedium(int choice) {
     cout<<"enter operator 2 in decimal \n";
     cin>>op2;
     if (choice==1)
-    cout<<op1+op2;
+    {
+        if (op1+op2>=0)
+        cout<<"As=0\n";
+        else 
+        cout<<"As=1\n";
+    cout<<"A="<<toBinary(op1+op2);
+    }
     else 
-    cout<<op1-op2;
+    {
+        if (op1-op2>=0)
+        cout<<"As=0\n";
+        else 
+        cout<<"As=1\n";
+    cout<<"A="<<toBinary(op1-op2);
+    }
 }
 
 void binarymedium(int choice) {
@@ -57,14 +59,18 @@ void binarymedium(int choice) {
     nop2 = todecimal(op2);
     if (choice == 1)
     {
-        if (nop1+nop2>0)
-        cout<<0;
-    cout<<decimal_to_binary(nop1+nop2);
+        if (nop1+nop2>=0)
+        cout<<"As=0\n";
+        else 
+        cout<<"As=1\n";
+    cout<<"A="<<toBinary(nop1+nop2);
     }
     else {
-    if (nop1-nop2>0)
-    cout<<0;
-    cout<<decimal_to_binary(nop1-nop2);
+        if (nop1-nop2>=0)
+        cout<<"As=0\n";
+        else 
+        cout<<"As=1\n";
+    cout<<"A="<<toBinary(nop1-nop2);
     }
 }
 
