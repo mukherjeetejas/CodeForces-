@@ -1,2 +1,5 @@
 # Ignore all exe files
 *.exe
+
+#ignore random vscode folder
+.vscode/
