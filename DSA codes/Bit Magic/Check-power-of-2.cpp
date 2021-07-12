@@ -2,22 +2,16 @@
 #include <iostream>
 using namespace std;
 //Right shift by K-1 and "AND" operation with 1 reveals if the Kth bit is set or not
-string kthBitParity(int n, int k)
+bool powerOfTwo(int n)
 {
-    if (n >> (k - 1) & 1)
-        return "Set";
-
-    else
-        return "Not set";
+    return !(n & (n - 1));
 }
 
 int main()
 {
-    int n, k;
+    int n;
     cout << "Enter a Number : ";
     cin >> n;
-    cout << "Enter value of K : ";
-    cin >> k;
-    cout << kthBitParity(n, k);
+    cout << powerOfTwo(n);
     return 0;
 }
