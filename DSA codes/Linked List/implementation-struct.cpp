@@ -1,3 +1,6 @@
+//Author Tejas Mukherjee
+//Implementation of linked list as a structure
+
 #include <iostream>
 using namespace std;
 
