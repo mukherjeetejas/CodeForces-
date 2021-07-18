@@ -62,7 +62,7 @@ int main()
     Node *head = new Node(21);
     head->next = new Node(12);
     head->next->next = new Node(5);
-    cout << "Before deletion : ";
+    cout << "Before insertion : ";
     printlist(head);
     int data, pos;
     cout << "enter element : ";
