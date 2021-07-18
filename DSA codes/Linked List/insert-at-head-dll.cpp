@@ -31,7 +31,8 @@ void printlist(Node *head)
 Node *insertatbeg(Node *head, int data)
 {
     Node *temp = new Node(data);
-    temp->next = head;
+    if (head != NULL)
+        temp->next = head;
     head->prev = temp;
     return temp;
 }
