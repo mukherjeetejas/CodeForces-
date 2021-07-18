@@ -25,6 +25,15 @@ void printlist(Node *head)
         cout << curr->data << '\t';
         curr = curr->next;
     }
+    cout << '\n';
+}
+
+Node *insertatbeg(Node *head, int data)
+{
+    Node *temp = new Node(data);
+    temp->next = head;
+    head->prev = temp;
+    return temp;
 }
 
 int main()
@@ -36,5 +45,10 @@ int main()
     temp1->next = temp2;
     temp2->prev = temp1;
     temp1->prev = head;
+    int data;
+    printlist(head);
+    cout << "insert new head : ";
+    cin >> data;
+    head = insertatbeg(head, data);
     printlist(head);
 }
