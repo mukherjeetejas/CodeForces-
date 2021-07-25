@@ -21,8 +21,8 @@ int countBitsFlips(int a, int b)
 
 int main()
 {
-    int p, q;
+    int num1, num2;
     cout << "Enter the numbers : ";
-    cin >> p >> q;
+    cin >> num1 >> num2;
     cout << countBitsFlips(p, q);
 }
