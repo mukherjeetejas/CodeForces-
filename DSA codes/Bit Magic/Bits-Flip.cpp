@@ -24,5 +24,5 @@ int main()
     int num1, num2;
     cout << "Enter the numbers : ";
     cin >> num1 >> num2;
-    cout << countBitsFlips(p, q);
+    cout << countBitsFlips(num1, num2);
 }
