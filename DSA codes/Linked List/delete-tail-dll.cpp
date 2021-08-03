@@ -1,7 +1,7 @@
 //Author Tejas Mukherjee
 //Implementation of linked list as a structure
-//delete head of doubly linked list
-
+//delete tail of doubly linked list
+// order of N, can become constant if tail pointer is maintained
 #include <iostream>
 using namespace std;
 
