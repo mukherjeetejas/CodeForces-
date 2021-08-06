@@ -34,10 +34,13 @@ int middlelinkedlist(Node *head)
     if (head->next == NULL)
         return head->data;
     Node *tortoise = head, *hare = head;
-    while (hare != NULL || hare->next == NULL)
+    while (hare->next != NULL && hare != NULL)
     {
-        hare = hare->next->next;
         tortoise = tortoise->next;
+        if (hare->next->next != NULL)
+            hare = hare->next->next;
+        else
+            break;
     }
     return tortoise->data;
 }
@@ -48,7 +51,7 @@ int main()
     head->next = new Node(0);
     head->next->next = new Node(87);
     head->next->next->next = new Node(5);
-    head->next->next->next->next = new Node(23);
+    //head->next->next->next->next = new Node(23);
 
     printlist(head);
     cout << "middle element of linked list is : " << middlelinkedlist(head);
