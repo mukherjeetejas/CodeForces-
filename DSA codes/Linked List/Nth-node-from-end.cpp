@@ -1,5 +1,6 @@
 //Author Tejas Mukherjee
-//Insert in Singly linked list in sorted manner
+//Nth element from last in a linked list in O(n)
+//Using two pointers separated by N nodes
 
 #include <iostream>
 using namespace std;
