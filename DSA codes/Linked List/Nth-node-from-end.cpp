@@ -29,24 +29,20 @@ void printlist(Node *head)
     }
 }
 
-Node *insertSorted(Node *head, int data)
+int displayNLast(Node *head, int n)
 {
-    Node *temp = new Node(data);
-    if (head == NULL)
-        return temp;
-    if (head->data > data)
+    Node *slow = head;
+    Node *fast = head;
+    for (int i = 0; i < n; i++)
     {
-        temp->next = head;
-        return temp;
+        fast = fast->next;
     }
-    Node *curr = head;
-    while (curr->next != NULL && curr->next->data < data)
+    while (fast != NULL)
     {
-        curr = curr->next;
+        fast = fast->next;
+        slow = slow->next;
     }
-    temp->next = curr->next;
-    curr->next = temp;
-    return head;
+    return slow->data;
 }
 
 int main()
@@ -56,9 +52,9 @@ int main()
     head->next->next = new Node(5);
     head->next->next->next = new Node(10);
     printlist(head);
-    int data;
-    cout << "Enter new element : ";
-    cin >> data;
-    head = insertSorted(head, data);
+    int n;
+    cout << "Enter value of  N : ";
+    cin >> n;
+    cout << displayNLast(head, n) << '\n';
     printlist(head);
 }
