@@ -1,6 +1,6 @@
 //Author Tejas Mukherjee
-//Nth element from last in a linked list in O(n)
-//Using two pointers separated by N nodes
+//Reversal of linked list in O(n)
+//save next link in a variable and change next of the node
 
 #include <iostream>
 using namespace std;
