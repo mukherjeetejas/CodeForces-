@@ -1,5 +1,10 @@
 //Author Tejas Mukherjee
-//Floyd Cycle Detection Algorithm
+/* Floyd Cycle Detection Algorithm
+Distance between slow and fast increases by 1 in every iteration
+A point comes when 
+length of loop = distance between the pointers
+[at this time they will be pointing to the same node]
+ */
 
 #include <iostream>
 using namespace std;
