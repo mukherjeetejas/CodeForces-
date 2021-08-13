@@ -34,10 +34,41 @@ void printlist(Node *head)
     }
 }
 
-Node *removeloop(Node *head)
+void removeloop(Node *head)
 {
     //detect loop using floyd cycle detection
-    return head;
+    Node *fast = head;
+    Node *slow = head;
+    while (fast != NULL && fast->next != NULL)
+    {
+        fast = fast->next->next;
+        slow = slow->next;
+        if (fast == slow)
+            break;
+    }
+    if (fast != slow)
+        return;
+    slow = head;
+    while (slow->next != fast->next)
+    {
+        slow = slow->next;
+        fast = fast->next;
+    }
+    fast->next = NULL;
+}
+
+bool loop(Node *head)
+{
+    Node *slow = head;
+    Node *fast = head;
+    while (fast != NULL && fast->next != NULL)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+        if (slow == fast)
+            return true;
+    }
+    return false;
 }
 
 int main()
@@ -47,5 +78,7 @@ int main()
     head->next->next = new Node(5);
     head->next->next->next = new Node(10);
     head->next->next->next->next = head->next;
-    head = removeloop(head);
+    cout << loop(head) << '\t';
+    removeloop(head);
+    cout << loop(head) << '\t';
 }
