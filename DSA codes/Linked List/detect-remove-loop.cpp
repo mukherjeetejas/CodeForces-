@@ -34,7 +34,7 @@ void printlist(Node *head)
     }
 }
 
-bool removeloop(Node *head)
+Node *removeloop(Node *head)
 {
     //detect loop using floyd cycle detection
     return head;
