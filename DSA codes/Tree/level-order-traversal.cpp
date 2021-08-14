@@ -1,5 +1,5 @@
 //Tree traversal inorder
-//K distance apart print, send a variable K with print function for all nodes
+//Level order traversal of tree using queue DS
 //Tejas K Mukherjee
 
 #include <iostream>
