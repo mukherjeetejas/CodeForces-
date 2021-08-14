@@ -1,5 +1,5 @@
 //Tree traversal inorder
-//POSTORDER => LEFT SUBTREE + RIGHT SUBTREE + ROOT
+//K distance apart print, send a variable K with print function for all nodes
 //Tejas K Mukherjee
 
 #include <iostream>
