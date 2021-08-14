@@ -1,4 +1,5 @@
-//Tree implementation
+//Tree traversal inorder
+//INORDER => LEFT SUBTREE + ROOT + RIGHT SUBTREE
 //Tejas K Mukherjee
 
 #include <iostream>
