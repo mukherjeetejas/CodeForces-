@@ -1,5 +1,4 @@
-//Tree traversal inorder
-//POSTORDER => LEFT SUBTREE + RIGHT SUBTREE + ROOT
+//Size of tree using recursion
 //Tejas K Mukherjee
 
 #include <iostream>
