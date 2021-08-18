@@ -1,6 +1,7 @@
-//Tree traversal level order
+//Tree traversal level order traversal line by line
 //Level order traversal of tree using queue DS
 //Tejas K Mukherjee
+//Based on the fact that when the last node of the level is reachedthe next line is completely in the queue
 
 #include <iostream>
 #include <queue>
